@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CocoaLumberjack
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,9 +18,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return Bundle.main.object(forInfoDictionaryKey: "VERSION_HELLO") as! String
     }
     
+    func setupLogger() {
+        // use console output
+        DDLog.add(DDOSLogger.sharedInstance)
+        
+        // TODO: add more loggers like DDFileLogger in the future implementation
+    }
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        print(getVersionHello())
+        setupLogger()
+        DDLogInfo(getVersionHello())
         return true
     }
 }
