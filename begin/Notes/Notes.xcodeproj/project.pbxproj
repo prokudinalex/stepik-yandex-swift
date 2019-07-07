@@ -12,7 +12,6 @@
 		2963BD0D22CC7E8C0060620D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2963BD0B22CC7E8C0060620D /* Main.storyboard */; };
 		2963BD0F22CC7E8E0060620D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2963BD0E22CC7E8E0060620D /* Assets.xcassets */; };
 		2963BD1222CC7E8E0060620D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2963BD1022CC7E8E0060620D /* LaunchScreen.storyboard */; };
-		2963BD1D22CC7E8E0060620D /* NotesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2963BD1C22CC7E8E0060620D /* NotesTests.swift */; };
 		2963BD2C22CC7F8E0060620D /* FileNotebook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2963BD2922CC7F8E0060620D /* FileNotebook.swift */; };
 		2963BD2D22CC7F8E0060620D /* NoteExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2963BD2A22CC7F8E0060620D /* NoteExtension.swift */; };
 		2963BD2E22CC7F8E0060620D /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2963BD2B22CC7F8E0060620D /* Note.swift */; };
@@ -37,8 +36,6 @@
 		2963BD1122CC7E8E0060620D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2963BD1322CC7E8E0060620D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2963BD1822CC7E8E0060620D /* NotesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NotesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2963BD1C22CC7E8E0060620D /* NotesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTests.swift; sourceTree = "<group>"; };
-		2963BD1E22CC7E8E0060620D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2963BD2922CC7F8E0060620D /* FileNotebook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileNotebook.swift; sourceTree = "<group>"; };
 		2963BD2A22CC7F8E0060620D /* NoteExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteExtension.swift; sourceTree = "<group>"; };
 		2963BD2B22CC7F8E0060620D /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
@@ -66,7 +63,6 @@
 			isa = PBXGroup;
 			children = (
 				2963BD0622CC7E8C0060620D /* Notes */,
-				2963BD1B22CC7E8E0060620D /* NotesTests */,
 				2963BD0522CC7E8C0060620D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -92,15 +88,6 @@
 				2963BD1322CC7E8E0060620D /* Info.plist */,
 			);
 			path = Notes;
-			sourceTree = "<group>";
-		};
-		2963BD1B22CC7E8E0060620D /* NotesTests */ = {
-			isa = PBXGroup;
-			children = (
-				2963BD1C22CC7E8E0060620D /* NotesTests.swift */,
-				2963BD1E22CC7E8E0060620D /* Info.plist */,
-			);
-			path = NotesTests;
 			sourceTree = "<group>";
 		};
 		2963BD2822CC7F0C0060620D /* Model */ = {
@@ -226,7 +213,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2963BD1D22CC7E8E0060620D /* NotesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
