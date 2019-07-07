@@ -14,6 +14,18 @@ public class FileNotebook {
         notes[uid] = nil
     }
     
+    public func removeAll() {
+        notes.removeAll()
+    }
+    
+    public func size() -> Int {
+        return notes.count
+    }
+    
+    public func get(with uid: String) -> Note? {
+        return notes[uid]
+    }
+    
     public func saveToFile() {
         let jsons = notes.values.compactMap{ $0.json }
         do {
