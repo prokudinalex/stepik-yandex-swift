@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,75 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Notes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zMS-Ei-3B9">
+                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter title for your note" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Jw-ub-ZTv">
+                                        <rect key="frame" x="16" y="8" width="343" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kmY-6y-mdi">
+                                        <rect key="frame" x="24" y="53.999999999999986" width="327" height="216.66666666666663"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use Destroy Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Yg-Rg-Cgz">
+                                        <rect key="frame" x="16" y="286.66666666666669" width="139" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="BG6-Co-p91">
+                                        <rect key="frame" x="171" y="281.66666666666669" width="51" height="31"/>
+                                    </switch>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="here will be the squares" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BXd-VH-zg5">
+                                        <rect key="frame" x="16" y="328.66666666666669" width="343" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="1Jw-ub-ZTv" secondAttribute="trailing" constant="16" id="3uH-xG-kG6"/>
+                                    <constraint firstItem="kmY-6y-mdi" firstAttribute="top" secondItem="1Jw-ub-ZTv" secondAttribute="bottom" constant="16" id="AY1-bp-hdf"/>
+                                    <constraint firstItem="BXd-VH-zg5" firstAttribute="leading" secondItem="zMS-Ei-3B9" secondAttribute="leading" constant="16" id="BeM-Tx-IAB"/>
+                                    <constraint firstAttribute="trailing" secondItem="BXd-VH-zg5" secondAttribute="trailing" constant="16" id="I7R-YR-tc1"/>
+                                    <constraint firstItem="BXd-VH-zg5" firstAttribute="top" secondItem="BG6-Co-p91" secondAttribute="bottom" constant="16" id="Tqk-HA-Tno"/>
+                                    <constraint firstItem="BG6-Co-p91" firstAttribute="centerY" secondItem="2Yg-Rg-Cgz" secondAttribute="centerY" id="YCv-VY-Cdt"/>
+                                    <constraint firstItem="1Jw-ub-ZTv" firstAttribute="leading" secondItem="zMS-Ei-3B9" secondAttribute="leading" constant="16" id="eH9-nI-Gb3"/>
+                                    <constraint firstItem="kmY-6y-mdi" firstAttribute="leading" secondItem="zMS-Ei-3B9" secondAttribute="leading" constant="24" id="fL1-mp-SmF"/>
+                                    <constraint firstItem="kmY-6y-mdi" firstAttribute="centerX" secondItem="zMS-Ei-3B9" secondAttribute="centerX" id="j13-ig-Ohh"/>
+                                    <constraint firstAttribute="bottom" secondItem="BXd-VH-zg5" secondAttribute="bottom" id="jW7-9A-KGD"/>
+                                    <constraint firstItem="2Yg-Rg-Cgz" firstAttribute="top" secondItem="kmY-6y-mdi" secondAttribute="bottom" constant="16" id="mXv-VL-IgD"/>
+                                    <constraint firstItem="1Jw-ub-ZTv" firstAttribute="top" secondItem="zMS-Ei-3B9" secondAttribute="top" constant="8" id="r1v-Vc-0ds"/>
+                                    <constraint firstItem="BG6-Co-p91" firstAttribute="leading" secondItem="2Yg-Rg-Cgz" secondAttribute="trailing" constant="16" id="tS9-pE-eKD"/>
+                                    <constraint firstAttribute="trailing" secondItem="kmY-6y-mdi" secondAttribute="trailing" constant="24" id="tlQ-Do-cNl"/>
+                                    <constraint firstItem="2Yg-Rg-Cgz" firstAttribute="leading" secondItem="zMS-Ei-3B9" secondAttribute="leading" constant="16" id="uWc-2b-zNz"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zMS-Ei-3B9" secondAttribute="bottom" id="1Z9-xr-5OO"/>
+                            <constraint firstItem="zMS-Ei-3B9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Hhy-cC-fD2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zMS-Ei-3B9" secondAttribute="trailing" id="WN8-KF-1ji"/>
+                            <constraint firstItem="zMS-Ei-3B9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ee6-aQ-uA4"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="140" y="133.00492610837438"/>
         </scene>
     </scenes>
 </document>
