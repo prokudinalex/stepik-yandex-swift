@@ -45,21 +45,44 @@
                                     </label>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="BG6-Co-p91">
                                         <rect key="frame" x="171" y="281.66666666666669" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="dateSwitchChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="ZHO-UO-W4j"/>
+                                        </connections>
                                     </switch>
+                                    <view opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0UA-Wy-8ux" userLabel="Date Picker View">
+                                        <rect key="frame" x="8" y="320.66666666666669" width="367" height="216.00000000000006"/>
+                                        <subviews>
+                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="8xq-wH-BjJ">
+                                                <rect key="frame" x="0.0" y="0.0" width="367" height="216"/>
+                                                <date key="date" timeIntervalSinceReferenceDate="584717136.86509705">
+                                                    <!--2019-07-13 13:25:36 +0000-->
+                                                </date>
+                                            </datePicker>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" priority="999" constant="216" id="CIM-wt-kzk"/>
+                                            <constraint firstItem="8xq-wH-BjJ" firstAttribute="leading" secondItem="0UA-Wy-8ux" secondAttribute="leading" id="S6Q-Q0-iKC"/>
+                                            <constraint firstAttribute="trailing" secondItem="8xq-wH-BjJ" secondAttribute="trailing" id="dgB-gx-VBx"/>
+                                            <constraint firstItem="8xq-wH-BjJ" firstAttribute="centerY" secondItem="0UA-Wy-8ux" secondAttribute="centerY" id="jYo-ng-qYE"/>
+                                        </constraints>
+                                    </view>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="here will be the squares" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BXd-VH-zg5">
-                                        <rect key="frame" x="16" y="328.66666666666669" width="343" height="30"/>
+                                        <rect key="frame" x="16" y="536.66666666666663" width="343" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="0UA-Wy-8ux" firstAttribute="top" secondItem="BG6-Co-p91" secondAttribute="bottom" constant="8" id="1YE-KN-ogU"/>
                                     <constraint firstAttribute="trailing" secondItem="1Jw-ub-ZTv" secondAttribute="trailing" constant="16" id="3uH-xG-kG6"/>
+                                    <constraint firstItem="0UA-Wy-8ux" firstAttribute="leading" secondItem="zMS-Ei-3B9" secondAttribute="leading" constant="8" id="4jb-O8-mS6"/>
                                     <constraint firstItem="kmY-6y-mdi" firstAttribute="top" secondItem="1Jw-ub-ZTv" secondAttribute="bottom" constant="16" id="AY1-bp-hdf"/>
                                     <constraint firstItem="BXd-VH-zg5" firstAttribute="leading" secondItem="zMS-Ei-3B9" secondAttribute="leading" constant="16" id="BeM-Tx-IAB"/>
+                                    <constraint firstItem="BXd-VH-zg5" firstAttribute="top" secondItem="0UA-Wy-8ux" secondAttribute="bottom" id="Fzs-i2-NNa"/>
                                     <constraint firstAttribute="trailing" secondItem="BXd-VH-zg5" secondAttribute="trailing" constant="16" id="I7R-YR-tc1"/>
-                                    <constraint firstItem="BXd-VH-zg5" firstAttribute="top" secondItem="BG6-Co-p91" secondAttribute="bottom" constant="16" id="Tqk-HA-Tno"/>
                                     <constraint firstItem="BG6-Co-p91" firstAttribute="centerY" secondItem="2Yg-Rg-Cgz" secondAttribute="centerY" id="YCv-VY-Cdt"/>
+                                    <constraint firstAttribute="trailing" secondItem="0UA-Wy-8ux" secondAttribute="trailing" id="Zh1-mP-s0A"/>
                                     <constraint firstItem="1Jw-ub-ZTv" firstAttribute="leading" secondItem="zMS-Ei-3B9" secondAttribute="leading" constant="16" id="eH9-nI-Gb3"/>
                                     <constraint firstItem="kmY-6y-mdi" firstAttribute="leading" secondItem="zMS-Ei-3B9" secondAttribute="leading" constant="24" id="fL1-mp-SmF"/>
                                     <constraint firstItem="kmY-6y-mdi" firstAttribute="centerX" secondItem="zMS-Ei-3B9" secondAttribute="centerX" id="j13-ig-Ohh"/>
@@ -82,6 +105,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="datePicker" destination="8xq-wH-BjJ" id="Dk1-Jx-vha"/>
+                        <outlet property="datePickerHeight" destination="CIM-wt-kzk" id="jvw-xq-6BJ"/>
+                        <outlet property="datePickerSwitch" destination="BG6-Co-p91" id="xs4-D2-X0e"/>
+                        <outlet property="datePickerView" destination="0UA-Wy-8ux" id="Tgo-7v-nak"/>
                         <outlet property="noteHeightConstraint" destination="iYh-1Q-z42" id="MIe-eM-IiW"/>
                         <outlet property="scrollView" destination="zMS-Ei-3B9" id="KN2-Ox-dvT"/>
                         <outlet property="view" destination="8bC-Xf-vdC" id="BVf-Ld-dRE"/>

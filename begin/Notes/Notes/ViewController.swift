@@ -7,14 +7,23 @@
 //
 
 import UIKit
+import CocoaLumberjack
 
 class ViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var noteHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var datePickerView: UIView!
+    @IBOutlet weak var datePicker: UIDatePicker!
+    @IBOutlet weak var datePickerHeight: NSLayoutConstraint!
+    @IBOutlet weak var datePickerSwitch: UISwitch!
+    
+    private let datePickerDefaultLength: CGFloat = 216
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
+        self.datePickerHeight.constant = 0;
+        
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -32,6 +41,18 @@ class ViewController: UIViewController {
         
         // set up note height as a quarter of screen
         noteHeightConstraint.constant = self.view.bounds.height / 4
+    }
+    
+    @IBAction func dateSwitchChanged(_ sender: UISwitch) {
+        DDLogInfo("Date switch changed: \(sender.isOn)")
+        animateDatePicker(shouldCollapse: !sender.isOn)
+    }
+    
+    private func animateDatePicker(shouldCollapse: Bool) {
+        UIView.animate(withDuration: 0.3, animations: {
+            self.datePickerHeight.constant = shouldCollapse ? 0 : self.datePickerDefaultLength
+            self.view.layoutIfNeeded()
+        })
     }
     
     private func registerNotifications() {
