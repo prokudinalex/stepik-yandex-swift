@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		13C15B4B71576047FDA71454 /* libPods-NotesTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B82A149F66F0E5A84C9713C3 /* libPods-NotesTests.a */; };
+		2904505122D9B3DC0050A3DB /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2904505022D9B3DC0050A3DB /* ViewControllerExtension.swift */; };
 		2926D95A22D2006C00A4061C /* FileNotebookTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2926D95922D2006C00A4061C /* FileNotebookTest.swift */; };
 		2963BD0822CC7E8C0060620D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2963BD0722CC7E8C0060620D /* AppDelegate.swift */; };
 		2963BD0A22CC7E8C0060620D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2963BD0922CC7E8C0060620D /* ViewController.swift */; };
@@ -33,6 +34,7 @@
 /* Begin PBXFileReference section */
 		0BF8E3F5F71FC5BAD92C14AB /* Pods-Notes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Notes.debug.xcconfig"; path = "Target Support Files/Pods-Notes/Pods-Notes.debug.xcconfig"; sourceTree = "<group>"; };
 		221874F3F49397E91F96DACA /* Pods-NotesTests.paid release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotesTests.paid release.xcconfig"; path = "Target Support Files/Pods-NotesTests/Pods-NotesTests.paid release.xcconfig"; sourceTree = "<group>"; };
+		2904505022D9B3DC0050A3DB /* ViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
 		2926D95922D2006C00A4061C /* FileNotebookTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileNotebookTest.swift; sourceTree = "<group>"; };
 		2963BD0422CC7E8C0060620D /* Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2963BD0722CC7E8C0060620D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				2963BD0E22CC7E8E0060620D /* Assets.xcassets */,
 				2963BD1022CC7E8E0060620D /* LaunchScreen.storyboard */,
 				2963BD1322CC7E8E0060620D /* Info.plist */,
+				2904505022D9B3DC0050A3DB /* ViewControllerExtension.swift */,
 			);
 			path = Notes;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 			files = (
 				2963BD2E22CC7F8E0060620D /* Note.swift in Sources */,
 				2963BD2C22CC7F8E0060620D /* FileNotebook.swift in Sources */,
+				2904505122D9B3DC0050A3DB /* ViewControllerExtension.swift in Sources */,
 				2963BD2D22CC7F8E0060620D /* NoteExtension.swift in Sources */,
 				2963BD0A22CC7E8C0060620D /* ViewController.swift in Sources */,
 				2963BD0822CC7E8C0060620D /* AppDelegate.swift in Sources */,
