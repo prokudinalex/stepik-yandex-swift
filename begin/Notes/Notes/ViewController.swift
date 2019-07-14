@@ -38,21 +38,35 @@ class ViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        
-        // set up note height as a quarter of screen
-        noteHeightConstraint.constant = self.view.bounds.height / 4
+        updateUI()
     }
     
     @IBAction func dateSwitchChanged(_ sender: UISwitch) {
         DDLogInfo("Date switch changed: \(sender.isOn)")
+        
+        // show view right away, if needed
+        if (sender.isOn) {
+            self.datePickerView.isHidden = false
+        }
         animateDatePicker(shouldCollapse: !sender.isOn)
+        
+        // close keyboard, as user has ended his work with text
+        dismissKeyboard()
     }
     
     private func animateDatePicker(shouldCollapse: Bool) {
         UIView.animate(withDuration: 0.3, animations: {
             self.datePickerHeight.constant = shouldCollapse ? 0 : self.datePickerDefaultLength
             self.view.layoutIfNeeded()
+        }, completion: { finished in
+            // will hide it after animation end
+            self.updateUI()
         })
+    }
+    
+    private func updateUI() {
+        self.noteHeightConstraint.constant = self.view.bounds.height / 4
+        self.datePickerView.isHidden = !self.datePickerSwitch.isOn
     }
     
     private func registerNotifications() {
