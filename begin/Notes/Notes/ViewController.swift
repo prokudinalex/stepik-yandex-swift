@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var datePickerHeight: NSLayoutConstraint!
     @IBOutlet weak var datePickerSwitch: UISwitch!
+    @IBOutlet weak var colorPanelCollectionView: ColorPanelCollectionView!
     
     private let datePickerDefaultLength: CGFloat = 216
     
@@ -67,6 +68,9 @@ class ViewController: UIViewController {
     private func updateUI() {
         self.noteHeightConstraint.constant = self.view.bounds.height / 4
         self.datePickerView.isHidden = !self.datePickerSwitch.isOn
+        
+        // need to invalidate collection view to layout it again after rotation
+        self.colorPanelCollectionView.collectionViewLayout.invalidateLayout()
     }
     
     private func registerNotifications() {
